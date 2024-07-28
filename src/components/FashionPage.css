@@ -1,0 +1,56 @@
+.fashion-page {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4ed; /* Light beige background */
+  color: #333; /* Dark grey text */
+}
+
+.fashion-header {
+  background-color: #ff6f61; /* Coral header */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fashion-header h1 {
+  font-size: 36px;
+  color: white;
+  text-shadow: 1px 1px 2px #000; /* Slight shadow for depth */
+}
+
+.fashion-content {
+  margin-top: 20px;
+}
+
+.fashion-content h2 {
+  font-size: 28px;
+  color: #ff6f61; /* Coral text */
+}
+
+.fashion-content p {
+  font-size: 18px;
+  color: #555; /* Medium grey text */
+}
+
+.fashion-post {
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.fashion-post:hover {
+  transform: scale(1.05);
+}
+
+.fashion-post h3 {
+  font-size: 22px;
+  color: #ff6f61; /* Coral text */
+}
+
+.fashion-post p {
+  font-size: 16px;
+  color: #555; /* Medium grey text */
+}
