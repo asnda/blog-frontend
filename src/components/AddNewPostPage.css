@@ -1,68 +1,62 @@
-/* AddNewPostPage.css */
 .add-post-page {
+  background-color: #f5f5f5;
+  font-family: 'Georgia', serif;
+  color: #333;
   padding: 20px;
-  font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark grey text */
 }
 
-.add-post-page h1 {
-  background-color: #ff6347; /* Green header */
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  font-size: 36px;
+h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .add-post-form {
-  background-color: white; /* White background */
-  border: 1px solid #ddd; /* Light grey border */
-  border-radius: 10px;
+  background-color: #fff;
   padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.add-post-form .form-group {
+.form-group {
   margin-bottom: 15px;
 }
 
-.add-post-form label {
+label {
   display: block;
+  font-size: 1.2rem;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
-.add-post-form input[type="text"],
-.add-post-form input[type="file"],
-.add-post-form select,
-.add-post-form textarea {
-  width: calc(100% - 20px);
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.add-post-form textarea {
-  height: 150px;
-  resize: vertical;
+textarea {
+  height: 100px;
 }
 
-.add-post-form button {
-  background-color: #ff6347; /* Green button */
-  color: white;
+button {
+  background-color: #333;
+  color: #fff;
   padding: 10px 20px;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
-.add-post-form button:hover {
-  background-color: #ff6347; /* Darker green on hover */
+button:hover {
+  background-color: #555;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
