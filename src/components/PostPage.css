@@ -21,7 +21,7 @@
 .post-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center; 
   margin-bottom: 30px;
 }
 
@@ -43,5 +43,5 @@
   line-height: 1.6;
   margin-bottom: 15px;
   color: #333;
-  text-align: center; /* Center text */
+  text-align: center;
 }
