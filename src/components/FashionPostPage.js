@@ -1,6 +1,7 @@
 import React from 'react';
 import './PostPage.css';
 
+
 const FashionPostPage = () => {
   return (
     <div className="post-page">

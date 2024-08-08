@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './HomePage.css';
 
 const HomePage = () => {
+  const [fashionPosts, setFashionPosts] = useState([]);
+  const [beautyPosts, setBeautyPosts] = useState([]);
+  const [lifestylePosts, setLifestylePosts] = useState([]);
+
+  useEffect(() => {
+    // Fetch Fashion Posts
+    axios.get('http://localhost:5000/api/posts?category=fashion')
+      .then(response => setFashionPosts(response.data))
+      .catch(error => console.error('Error fetching fashion posts:', error));
+
+    // Fetch Beauty Posts
+    axios.get('http://localhost:5000/api/posts?category=beauty')
+      .then(response => setBeautyPosts(response.data))
+      .catch(error => console.error('Error fetching beauty posts:', error));
+
+    // Fetch Lifestyle Posts
+    axios.get('http://localhost:5000/api/posts?category=lifestyle')
+      .then(response => setLifestylePosts(response.data))
+      .catch(error => console.error('Error fetching lifestyle posts:', error));
+  }, []);
+
   return (
     <div className="home-page">
       <div className="header">
@@ -20,23 +42,29 @@ const HomePage = () => {
       </div>
 
       <div className="post-grid">
-        <div className="post-preview">
-          <h2>Fashion Trends</h2>
-          <p>Stay updated with the latest fashion trends. From summer styles to stylish winter wear, find out what's trending in the fashion world...</p>
-          <Link to="/fashion" className="read-more">Read More</Link>
-        </div>
+        {fashionPosts.length > 0 && (
+          <div className="post-preview">
+            <h2>Fashion Trends</h2>
+            <p>{fashionPosts[0].content.substring(0, 100)}...</p>
+            <Link to="/fashion" className="read-more">Read More</Link>
+          </div>
+        )}
 
-        <div className="post-preview">
-          <h2>Beauty Trends</h2>
-          <p>Discover the top skincare products, makeup trends, and haircare products to keep you looking your best...</p>
-          <Link to="/beauty" className="read-more">Read More</Link>
-        </div>
+        {beautyPosts.length > 0 && (
+          <div className="post-preview">
+            <h2>Beauty Trends</h2>
+            <p>{beautyPosts[0].content.substring(0, 100)}...</p>
+            <Link to="/beauty" className="read-more">Read More</Link>
+          </div>
+        )}
 
-        <div className="post-preview">
-          <h2>Lifestyle</h2>
-          <p>Learn about healthy living, travel destinations, and home decor tips to enhance your lifestyle...</p>
-          <Link to="/lifestyle" className="read-more">Read More</Link>
-        </div>
+        {lifestylePosts.length > 0 && (
+          <div className="post-preview">
+            <h2>Lifestyle</h2>
+            <p>{lifestylePosts[0].content.substring(0, 100)}...</p>
+            <Link to="/lifestyle" className="read-more">Read More</Link>
+          </div>
+        )}
       </div>
     </div>
   );
